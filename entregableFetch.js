@@ -6,7 +6,6 @@ const urlApi = "https://fakestoreapi.com/products/";
 fetch(urlApi)
     .then(respuesta => {return (respuesta.json())})
     .then(datos => {
-        console.log(datos);
         for (let i = 0; i < datos.length; i++) {
             contenedor.innerHTML += `
             <div id="prod${datos[i].id}">
